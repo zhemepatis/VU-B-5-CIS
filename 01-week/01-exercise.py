@@ -34,7 +34,7 @@ for num in divisors:
         break
 
     print("Proceed? [Y/n]")
-    key = input()
+    inp = input()
 
-    if key == "n" or key == "N":
+    if inp == "n" or inp == "N":
         break
