@@ -1,5 +1,3 @@
-import math
-
 # reading data
 with open("02-data.txt") as data:
     key = data.readline()
