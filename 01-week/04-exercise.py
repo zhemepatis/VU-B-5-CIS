@@ -68,6 +68,7 @@ txt = txt.replace(" ", "")
 stencils = [key]
 prev_stencil = key
 side_len = len(key) + 1
+flattened = key
 
 for i in range(0, 3):
     rotated_stencil = []
@@ -75,12 +76,41 @@ for i in range(0, 3):
         print(f"curr num: {num}")
         rotated_num = rotate_num(num, side_len)
         rotated_stencil.append(rotated_num)
+        flattened.append(rotated_num)
     
     stencils.append(rotated_stencil)
     prev_stencil = rotated_stencil
 
-print(stencils)
+print(flattened)
 
+# check what squares weren't used
+unused_squares = []
+for i in range(0, side_len**2):
+    if i in flattened:
+        continue
+    
+    unused_squares.append(i)
+
+print(unused_squares)
+
+# preparing possible stencils
+possible_finished_stencils = []
+for item in unused_squares:
+    potential_set = []
+    next_num = item
+    print(item)
+    for stencil in stencils:
+        stencil.append(next_num)
+        next_num = rotate_num(next_num, side_len)
+        
+    print(potential_set)
+    possible_finished_stencils.append(potential_set)
+
+# printing possible answers
+
+
+# print(possible_finished_stencils)
+# print(possible_finished_stencils)
 
 
 
