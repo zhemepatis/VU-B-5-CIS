@@ -7,16 +7,16 @@ def encode_letter(letter, text_idx, key):
     alphabet_idx = gv.alphabet.index(letter)
 
     shift = gv.alphabet.index(key[text_idx % key_len])
-    return (alphabet_idx + shift) % alphabet_len
+    return gv.alphabet[(alphabet_idx + shift) % alphabet_len]
 
 def decode_letter(letter, text_idx, key):
     alphabet_len = len(gv.alphabet)
     key_len = len(key)
 
     alphabet_idx = gv.alphabet.index(letter)
-
+    
     shift = gv.alphabet.index(key[text_idx % key_len])
-    return (alphabet_idx - shift) % alphabet_len
+    return gv.alphabet[(alphabet_idx - shift) % alphabet_len]
 
 def decode_text(text, key):
     text_len = len(text)
@@ -26,6 +26,6 @@ def decode_text(text, key):
         e_letter = text[i]
         d_letter = decode_letter(e_letter, i, key)
 
-        result = result + gv.alphabet[d_letter]
+        result = result + d_letter
     
     return result
