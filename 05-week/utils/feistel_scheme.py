@@ -30,3 +30,10 @@ def decrypt_cfb(pair, func, keys, initialisation_vector):
 
     r_result, l_result = initialisation_vector
     return (l_result^pair[0], r_result^pair[1])
+
+def decrypt_crt(pair, counter, func, keys):
+    for key in keys:
+        counter = iteration(counter, func, key)
+
+    r_result, l_result = counter
+    return (l_result^pair[0], r_result^pair[1])
