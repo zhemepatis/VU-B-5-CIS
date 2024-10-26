@@ -1,4 +1,3 @@
-import utils.global_vars as gv
 from collections import defaultdict
 
 def get_splits(text, num):
