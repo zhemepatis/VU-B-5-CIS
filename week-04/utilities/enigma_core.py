@@ -17,4 +17,4 @@ def get_shifts(letter_idx, key_1, key_2):
 # passes rho^-1 . lambda . rho
 def pass_iteration(letter, shift, rotor_lambda):
     alphabet_len = len(gv.alphabet)
-    return rotor_lambda[(letter + shift) % alphabet_len] - shift
+    return (rotor_lambda[(letter + shift) % alphabet_len] - shift) % alphabet_len
