@@ -1,3 +1,19 @@
+# 2. Decrypt simplified ENIGMA cipher without reflection when key is [12, ?],
+# first rotor is [8, 13, 24, 18, 9, 0, 7, 14, 10, 11, 19, 25, 4, 17, 12, 21, 15, 3, 22, 2, 20, 16, 23, 1, 6, 5],
+# second rotor is [10, 2, 21, 18, 23, 6, 16, 14, 8, 11, 1, 25, 15, 20, 0, 24, 17, 19, 22, 5, 4, 3, 9, 12, 13, 7],
+# and first letter of the decrypted text is 'J'
+#
+# Cipher:
+# TSBZY OKWKW CEARF DBMFW JOILE 
+# FHQUR DTYCG LEWHJ PLYYN IQKMJ 
+# TLGLI HLVTN MDSOY ZVEPM EQPPF 
+# RHMJQ BVXEY XRPXN SUIUE FYOTQ 
+# KCOEJ EDCFX JAPVJ TZQQE GGSHP 
+# CYMRL UVNWF JFGSA LNYHX AUNPA 
+# PHIGV BQXHR HAFZK ZCDLE VBFZG 
+# CKAKY JLEXA IJSTN YVUZN QWYEE 
+# NTGXR CIVGP DYALU G 
+
 import utilities.global_vars as gv
 from utilities.letter_conversion_by_alphabet import letter_2_num, num_2_letter
 from utilities.simplified_enigma_cipher import decrypt_letter
