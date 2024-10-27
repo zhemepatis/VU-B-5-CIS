@@ -1,4 +1,6 @@
 # 1. Decipher Vigenere cipher when key is "DANGTIS"
+#
+# Cipher:
 # ŪUĖGK ŠKHNC RIŠFŽ PNŪTK CDUCG 
 # ZVSLK ĘCNBC ŽDNČC ŠSŽNT RYEYB 
 # AČGIL ČPĄVR MAĘLA BGNZS ŠOĖAD 

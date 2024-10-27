@@ -1,4 +1,6 @@
-# 4. Vigenere-auto šifro raktas =LIETUS. Iššifruokite šifrą 
+# 4. Decipher Vigenere autokey cipher when key is "LIETUS"
+#
+# Cipher:
 # KŠBJB EKMJĄ YSJZB ĮEĘFP YDHĘĖ 
 # CĘŽBO DCNPY OLUKĄ BDSNŪ OYDCG 
 # ĖGĮNĖ AĖRČN ĄSVRP KĮSFĮ GGČĮC 
@@ -16,16 +18,7 @@ import utils.str_funcs as sf
 
 gv.alphabet = "AĄBCČDEĘĖFGHIĮYJKLMNOPRSŠTUŲŪVZŽ"
 
-key = "LIETUS"
 text = "KŠBJBEKMJĄYSJZBĮEĘFPYDHĘĖCĘŽBODCNPYOLUKĄBDSNŪOYDCGĖGĮNĖAĖRČNĄSVRPKĮSFĮGGČĮCEČŲKĘUDGĮŠŠUUŠŪZĮUNČMCĮINŲĄCĘŽTVĘBNMTSSĖČZIKŠŠČODUEPGĘLIIĖČZGMYORŽCEZĄHŽŪVŠLĄDAFŠČUMKFČTNNĘSOYŽFTŠČYPBFŠKKLĘFGKĘNĮŽVŪĄCĮRORAJAGCRUĄOULEHPCAAUPŲĮZILYPĄĮIĖBEĮĮBOT"
-text_len = len(text)
-
-for idx in range(0, text_len):
-    e_letter = text[idx]
-    d_letter = vc.decrypt_letter(e_letter, idx, key)
-
-    key = key + d_letter
-    print(key)
-
+key = "LIETUS" + text
 result = vc.decrypt_text(text, key)
 print(result)

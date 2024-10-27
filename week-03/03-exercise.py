@@ -1,4 +1,6 @@
-# 3. Decipher Vigenere cipher when key is unknown 
+# 3. Decipher Vigenere cipher when key is unknown
+#
+# Cipher:
 # DIĘEO ETLMĘ EŽTŪY ĘEZDC BŠDHŽ 
 # CIŪŽC FMVRS IĖZIY CEŠRS FDBMĖ 
 # ŪYMAĘ ŠEŠĮĘ IŪLCŲ ZEŪIL CYOMĮ 

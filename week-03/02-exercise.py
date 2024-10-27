@@ -1,4 +1,6 @@
 # 2. Decipher Vigenere cipher when key starts with "BAL"
+#
+# Cipher:
 # UILFE ĄYNPV KLŠIĖ CTYZK HĮYYJ 
 # TĘSUĘ GPSĮS SŽAVK ĘOYSH YŽDOI 
 # LLSCŪ SLLTH ŠIGVT LTGLF OORŠS 
