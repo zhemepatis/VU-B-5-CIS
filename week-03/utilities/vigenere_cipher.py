@@ -1,4 +1,4 @@
-import utils.global_vars as gv
+import utilities.global_vars as gv
 
 def encrypt_letter(letter, letter_idx, key):
     alphabet_len = len(gv.alphabet)
