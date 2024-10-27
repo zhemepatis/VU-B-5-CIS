@@ -54,10 +54,10 @@
 # EVPIA MTGBL OABAI ŠŪSMĮ BŽDCI 
 # ĖEPIC HU 
 
-import utils.global_vars as gv
-import utils.vigenere_cipher as vc
-import utils.str_funcs as sf
-from utils.friedman_test import friedman_test
+import utilities.global_vars as gv
+import utilities.vigenere_cipher as vc
+import utilities.str_funcs as sf
+from utilities.friedman_test import friedman_test
 
 gv.alphabet = "AĄBCČDEĘĖFGHIĮYJKLMNOPRSŠTUŲŪVZŽ"
 

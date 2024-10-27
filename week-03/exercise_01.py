@@ -14,8 +14,8 @@
 # EODDŽ VTCCG VŽJŽČ CSTNŽ JAFHT 
 # ŲTĮVS LKĮ   
 
-import utils.global_vars as gv
-import utils.vigenere_cipher as vc
+import utilities.global_vars as gv
+import utilities.vigenere_cipher as vc
 
 gv.alphabet = "AĄBCČDEĘĖFGHIĮYJKLMNOPRSŠTUŲŪVZŽ"
 
