@@ -22,10 +22,10 @@ text_len = len(text)
 
 for idx in range(0, text_len):
     e_letter = text[idx]
-    d_letter = vc.decode_letter(e_letter, idx, key)
+    d_letter = vc.decrypt_letter(e_letter, idx, key)
 
     key = key + d_letter
     print(key)
 
-result = vc.decode_text(text, key)
+result = vc.decrypt_text(text, key)
 print(result)

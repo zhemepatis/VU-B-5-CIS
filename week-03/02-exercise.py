@@ -39,5 +39,5 @@ for split in text_splits:
 
 # assuming that key is "BALSAS"
 key = "BALSAS"
-result = vc.decode_text(text, key)
+result = vc.decrypt_text(text, key)
 print(result)
