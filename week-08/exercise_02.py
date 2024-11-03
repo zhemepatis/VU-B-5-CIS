@@ -5,8 +5,7 @@
 
 from scipy.stats import chi2
 import utilities.conversion as converter
-import utilities.statistical_test_core as stc
-import utilities.bit_pairs_test as bpt
+import utilities.stat_tests as st
 
 alfa = 0.1
 
@@ -15,11 +14,11 @@ txt = "ATEISPAVASARISATBUSKAMPERZIEMAMIEGOTILEMTA"
 txt_bin = converter.text_to_binary(txt)
 text_len = len(txt_bin)
 
-t = bpt.get_bit_pair_test_statistic(txt_bin)
+t = st.bit_pairs_test_stat(txt_bin)
 probability = 1 - chi2.cdf(t, 2)
 
 print(f"t = {t:.10f}, p = {probability:.10f}")
-stc.test_hypothesis_by_probability(alfa, probability)
+st.test_hypothesis_by_probability(alfa, probability)
 print()
 
 
@@ -28,11 +27,11 @@ txt = [19, 2, 145, 220, 230, 117, 44, 31, 26, 1, 23, 134, 220, 230, 100, 57, 11,
 txt_bin = converter.num_list_to_binary(txt)
 text_len = len(txt_bin)
 
-t = bpt.get_bit_pair_test_statistic(txt_bin)
+t = st.bit_pairs_test_stat(txt_bin)
 probability = 1 - chi2.cdf(t, 2)
 
 print(f"t = {t:.10f}, p = {probability:.10f}")
-stc.test_hypothesis_by_probability(alfa, probability)
+st.test_hypothesis_by_probability(alfa, probability)
 print()
 
 
@@ -41,8 +40,8 @@ txt = [95, 226, 183, 183, 211, 239, 225, 121, 169, 88, 187, 80, 183, 211, 254, 2
 txt_bin = converter.num_list_to_binary(txt)
 text_len = len(txt_bin)
 
-t = bpt.get_bit_pair_test_statistic(txt_bin)
+t = st.bit_pairs_test_stat(txt_bin)
 probability = 1 - chi2.cdf(t, 2)
 
 print(f"t = {t:.10f}, p = {probability:.10f}")
-stc.test_hypothesis_by_probability(alfa, probability)
+st.test_hypothesis_by_probability(alfa, probability)
