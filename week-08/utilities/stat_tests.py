@@ -1,3 +1,5 @@
+import math
+
 def count_ones_and_zeroes(text):
     N = [0] * 2
     for char in text:
@@ -39,6 +41,17 @@ def poker_test_stat(text, block_len):
 
     return ((2 ** block_len) / block_num) * sum([n**2 for n in N]) - block_num
 
+def autocorrelation_test_stat(text, d):
+    text_len = len(text)
+
+    X_d = 0
+    for i in range(text_len - d):
+        char_1 = text[i]
+        char_2 = text[i + d - 1]
+
+        X_d += int(char_1) ^ int(char_2)
+
+    return (2*X_d - text_len + d) / math.sqrt(text_len - d)
 
 def test_hypothesis_by_probability(alfa, probability):
     if alfa > probability:
