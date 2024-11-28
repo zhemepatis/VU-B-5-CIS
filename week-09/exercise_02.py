@@ -14,8 +14,8 @@ w_1 = 21820735546
 v_1 = key_public[0]
 print(f"Greatest common divisor of v_1 and p: {math.gcd(v_1, p)}")
 
-# since v_1_reduced and p_reducded GCD is 9 not 1, we proceed calculating s with reduced values
-s = pow(v_1//9, -1, p//9) * w_1 % p
+# since v_1_reduced and p_reducded GCD is 1, we proceed calculating s with reduced values
+s = pow(v_1, -1, p) * w_1 % p
 
 # deciphering text
 cipher_altered = [letter * s % p for letter in cipher]
