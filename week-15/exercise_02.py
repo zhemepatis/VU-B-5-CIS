@@ -26,7 +26,7 @@ hash_func.update(hash_inp)
 hash_result = hash_func.hexdigest()
 
 c = int(hash_result, 16) % (p - 1)
-r = (v - c * x) % (p - 1)
+r = (v - c * solution) % (p - 1)
 
 
 # checking if solution was found

@@ -12,8 +12,8 @@ R =[random.randint(1, p - 1) for _ in range(5)]
 
 C = [c * pow(r, -2, p) % p for r in R]
 
-u = pow(c, (p + 1) // 4, p)
-U = [pow(r, -1, p) * u % p for r in R]
+solution = pow(c, (p + 1) // 4, p)
+U = [pow(r, -1, p) * solution % p for r in R]
 
 hash_inp = "".join([str(c) for c in C])
 hash_inp = hash_inp.encode(encoding="utf-8")
@@ -47,9 +47,9 @@ for i in range(5):
 if is_correct:
     print("Correct solution was found:")
     # printing answers
-    print(f"c: {c}")
-    print(f"C: {C}")
-    print(f"P: {P}")
+    print(f"c = {c}")
+    print(f"C = {C}")
+    print(f"P = {P}")
 else:
     print("No correct solution was found.")
         
