@@ -1,23 +1,3 @@
-# su baitais neduos egzui!!
-
-'''
-1. Solve the congruence x^2=c mod p and publish the non-interactive proof, that you know the solution.
-[c,p]=[18312, 100003]
-
-2. Find the discrete logarithm log_gy and publish the non-interactive proof, that you know the solution.
-[g,y,p]=[2, 36465, 100003]
-
-import hashlib
-h = hashlib.md5()
-t=b'11110'
-h.update(t)
-h_value=h.hexdigest()
-print(h_value)
-print(bin(int(h_value[-2::],16))[-5::]) # 5 least significant bits 
-N=464646466 # just for example 
-int(h_value,16)%N # conversion to number
-'''
-
 # pirma uzduotis
 [c,p]=[18312, 100003]
 
